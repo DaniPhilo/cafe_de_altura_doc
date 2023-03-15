@@ -12,7 +12,6 @@ export default function NavBar() {
         <a href="#create-product" className="cursor-pointer">Create Product</a>
         <a href="#update-product" className="cursor-pointer">Update Product</a>
         <a href="#delete-product" className="cursor-pointer">Delete Product</a>
-        <a href="#populate-database" className="cursor-pointer">Populate Database</a>
       </ul>
     </nav>
   )
