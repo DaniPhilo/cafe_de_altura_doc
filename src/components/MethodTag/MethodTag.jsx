@@ -21,7 +21,7 @@ export default function MethodTag({ method, url }) {
 
     return (
         <div className="flex items-center gap-4">
-            <p className={`px-2 py-1 ${color} rounded`}>{method}</p>
+            <p className={`px-2 py-1 ${color} font-bold rounded`}>{method}</p>
             <p className="p-1 bg-slate-100">{url}</p>
         </div>
     )

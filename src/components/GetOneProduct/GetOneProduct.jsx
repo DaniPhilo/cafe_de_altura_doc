@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MethodTag from "../MethodTag/MethodTag";
 import Button from "../Button/Button";
 
@@ -20,18 +20,25 @@ export default function GetOneProduct({ setResponse }) {
         } else {
             setBrandInput(event.target.value);
         }
-        if (event.target.value === "") {
-            setQuery("")
-        } else {
-            setQuery(`${name}=${event.target.value}`)
-        }
     }
+
+    useEffect(() => {
+        if (idInput !== "") {
+            setQuery(`id=${idInput}`);
+        }
+        else if (brandInput !== "") {
+            setQuery(`brand=${brandInput}`);
+        } else {
+            setQuery("")
+        }
+    }, [idInput, brandInput])
 
     return (
         <article id="get-one-product" className="flex flex-col justify-start items-start gap-4 w-full pb-4 border-b">
             <div className="flex flex-col justify-start items-start gap-2">
                 <h3 className="text-xl font-medium">Get One Product</h3>
-                <p>This endpoint searches any coffee by ID or BRAND</p>
+                <p>This endpoint searches any coffee by ID or BRAND.</p>
+                <p>If both params are sent, ID has priority, since it is more specific.</p>
             </div>
             <div className="flex flex-col justify-start items-start gap-2">
                 <h4 className="text-lg">HTTP Request</h4>
@@ -40,10 +47,10 @@ export default function GetOneProduct({ setResponse }) {
             <div className="flex flex-col justify-start items-start gap-2">
                 <h4 className="text-lg">Query Parameters</h4>
                 <form className="grid grid-cols-2 gap-y-2 pl-4">
-                        <label htmlFor="id">id:</label>
-                        <input type="text" name="id" placeholder="coffee id string" onChange={(event) => handleChange(event, "id")} value={idInput} className="p-1 border border-slate-400 rounded" />
-                        <label htmlFor="brand">brand:</label>
-                        <input type="text" name="brand" placeholder="coffee brand string" onChange={(event) => handleChange(event, "brand")} value={brandInput} className="p-1 border border-slate-400 rounded" />
+                    <label htmlFor="id">id:</label>
+                    <input type="text" name="id" placeholder="coffee id string" onChange={(event) => handleChange(event, "id")} value={idInput} className="p-1 border border-slate-400 rounded" />
+                    <label htmlFor="brand">brand:</label>
+                    <input type="text" name="brand" placeholder="coffee brand string" onChange={(event) => handleChange(event, "brand")} value={brandInput} className="p-1 border border-slate-400 rounded" />
                 </form>
             </div>
 

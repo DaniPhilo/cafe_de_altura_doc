@@ -13,7 +13,7 @@ export default function GetAllProducts({ setResponse }) {
         <article id="get-all-products" className="flex flex-col justify-start items-start gap-4 w-full pb-4 border-b">
             <div className="flex flex-col justify-start items-start gap-2">
                 <h3 className="text-xl font-medium">Get All Products</h3>
-                <p>This endpoint retrieves all coffees in the API</p>
+                <p>This endpoint retrieves all coffees in the API.</p>
             </div>
             <div className="flex flex-col justify-start items-start gap-2">
                 <h4 className="text-lg">HTTP Request</h4>

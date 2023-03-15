@@ -26,7 +26,7 @@ export default function DeleteProduct({ setResponse }) {
     <article id="delete-product" className="flex flex-col justify-start items-start gap-4">
             <div className="flex flex-col justify-start items-start gap-2">
                 <h3 className="text-xl font-medium">Delete Product</h3>
-                <p>This endpoint deletes a product by id</p>
+                <p>This endpoint deletes a product by id.</p>
             </div>
             <div className="flex flex-col justify-start items-start gap-2">
                 <h4 className="text-lg">HTTP Request</h4>

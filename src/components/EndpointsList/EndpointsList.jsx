@@ -4,7 +4,7 @@ import GetAllProducts from "../GetAllProducts/GetAllProducts";
 import GetOneProduct from "../GetOneProduct/GetOneProduct";
 import UpdateProduct from "../UpdateProduct/UpdateProduct";
 
-export default function Routes({ setResponse }) {
+export default function EndpointsList({ setResponse }) {
 
     return (
         <section className="flex flex-col justify-start items-start gap-8 w-main-width ml-navbar-width p-8">

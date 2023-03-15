@@ -47,7 +47,7 @@ export default function UpdateProduct({ setResponse }) {
         <article id="update-product" className="flex flex-col justify-start items-start gap-4 w-full pb-4 border-b">
             <div className="flex flex-col justify-start items-start gap-2">
                 <h3 className="text-xl font-medium">Update Product</h3>
-                <p>This endpoint updates an existing coffee object</p>
+                <p>This endpoint updates an existing coffee object.</p>
             </div>
             <div className="flex flex-col justify-start items-start gap-2">
                 <h4 className="text-lg">HTTP Request</h4>
