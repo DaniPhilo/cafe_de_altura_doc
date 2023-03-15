@@ -1,5 +1,5 @@
 export default function Button({ handleClick }) {
   return (
-    <button type="button" onClick={handleClick} className="py-2 px-4 bg-blue-200 text-blue-800 rounded">Try Out</button>
+    <button type="button" onClick={handleClick} className="py-1 px-2 border border-slate-500 rounded cursor-pointer">Try Out</button>
   )
 }

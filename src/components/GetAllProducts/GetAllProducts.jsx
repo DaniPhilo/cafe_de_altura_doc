@@ -1,4 +1,5 @@
 import Button from "../Button/Button.jsx"
+import MethodTag from "../MethodTag/MethodTag"
 
 export default function GetAllProducts({ setResponse }) {
 
@@ -9,21 +10,18 @@ export default function GetAllProducts({ setResponse }) {
     }
 
     return (
-        <article className="flex flex-col justify-start items-start gap-4">
+        <article id="get-all-products" className="flex flex-col justify-start items-start gap-4 w-full pb-4 border-b">
             <div className="flex flex-col justify-start items-start gap-2">
-                <h3>Get All Products</h3>
+                <h3 className="text-xl font-medium">Get All Products</h3>
                 <p>This endpoint retrieves all coffees in the API</p>
             </div>
             <div className="flex flex-col justify-start items-start gap-2">
-                <h4>HTTP Request</h4>
-                <div>
-                    <p>GET</p>
-                    <p>https://cda-api.vercel.app/api/products</p>
-                </div>
+                <h4 className="text-lg">HTTP Request</h4>
+                <MethodTag method="GET" url="https://cda-api.vercel.app/api/products" />
             </div>
             <div className="flex flex-col justify-start items-start gap-2">
-                <h4>Responses</h4>
-                <ul>
+                <h4 className="text-lg">Responses</h4>
+                <ul className="pl-4">
                     <li>
                         <p>Code: 200</p>
                         <p>Payload: array with all coffees (object)</p>

@@ -4,7 +4,13 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        "navbar-width": "15%",
+        "main-width": "50%",
+        "display-width": "35%"
+      }
+    },
   },
   plugins: [],
 }

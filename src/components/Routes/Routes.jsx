@@ -7,7 +7,8 @@ import UpdateProduct from "../UpdateProduct/UpdateProduct";
 export default function Routes({ setResponse }) {
 
     return (
-        <section className="w-2/3 ml-[16.6%] p-4">
+        <section className="flex flex-col justify-start items-start gap-8 w-main-width ml-navbar-width p-8">
+            <h2 className="text-2xl font-medium">API Endpoints</h2>
             <GetAllProducts setResponse={setResponse} />
             <GetOneProduct setResponse={setResponse} />
             <CreateProduct setResponse={setResponse} />

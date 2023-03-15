@@ -1,4 +1,5 @@
 import { useState } from "react";
+import MethodTag from "../MethodTag/MethodTag";
 import Button from "../Button/Button";
 
 export default function GetOneProduct({ setResponse }) {
@@ -27,21 +28,18 @@ export default function GetOneProduct({ setResponse }) {
     }
 
     return (
-        <article className="flex flex-col justify-start items-start gap-4">
+        <article id="get-one-product" className="flex flex-col justify-start items-start gap-4 w-full pb-4 border-b">
             <div className="flex flex-col justify-start items-start gap-2">
-                <h3>Get One Product</h3>
+                <h3 className="text-xl font-medium">Get One Product</h3>
                 <p>This endpoint searches any coffee by ID or BRAND</p>
             </div>
             <div className="flex flex-col justify-start items-start gap-2">
-                <h4>HTTP Request</h4>
-                <div>
-                    <p>GET</p>
-                    <p>https://cda-api.vercel.app/api/products/coffee/?&#123;id or brand&#125;</p>
-                </div>
+                <h4 className="text-lg">HTTP Request</h4>
+                <MethodTag method="GET" url="https://cda-api.vercel.app/api/products/coffee/?&#123;id or brand&#125;" />
             </div>
             <div className="flex flex-col justify-start items-start gap-2">
-                <h4>Query Parameters</h4>
-                <form className="grid grid-cols-2 gap-y-2">
+                <h4 className="text-lg">Query Parameters</h4>
+                <form className="grid grid-cols-2 gap-y-2 pl-4">
                         <label htmlFor="id">id:</label>
                         <input type="text" name="id" placeholder="coffee id string" onChange={(event) => handleChange(event, "id")} value={idInput} className="p-1 border border-slate-400 rounded" />
                         <label htmlFor="brand">brand:</label>
@@ -50,8 +48,8 @@ export default function GetOneProduct({ setResponse }) {
             </div>
 
             <div className="flex flex-col justify-start items-start gap-2">
-                <h4>Responses</h4>
-                <ul>
+                <h4 className="text-lg">Responses</h4>
+                <ul className="flex flex-col gap-2 pl-4">
                     <li>
                         <p>Code: 200</p>
                         <p>Payload: array with all coffees (object)</p>

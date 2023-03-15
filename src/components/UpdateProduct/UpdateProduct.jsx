@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Button from "../Button/Button"
+import MethodTag from "../MethodTag/MethodTag";
 
 export default function UpdateProduct({ setResponse }) {
     const [coffeeId, setCoffeeId] = useState({
@@ -43,21 +44,18 @@ export default function UpdateProduct({ setResponse }) {
     }
 
     return (
-        <article className="flex flex-col justify-start items-start gap-4">
+        <article id="update-product" className="flex flex-col justify-start items-start gap-4 w-full pb-4 border-b">
             <div className="flex flex-col justify-start items-start gap-2">
-                <h3>Update Product</h3>
+                <h3 className="text-xl font-medium">Update Product</h3>
                 <p>This endpoint updates an existing coffee object</p>
             </div>
             <div className="flex flex-col justify-start items-start gap-2">
-                <h4>HTTP Request</h4>
-                <div>
-                    <p>PUT</p>
-                    <p>https://cda-api.vercel.app/api/products/update</p>
-                </div>
+                <h4 className="text-lg">HTTP Request</h4>
+                <MethodTag method="PUT" url="https://cda-api.vercel.app/api/products/update" />
             </div>
             <div className="flex flex-col justify-start items-start gap-2">
-                <h4>Request Body</h4>
-                <form className="flex flex-col justify-start items-start gap-2">
+                <h4 className="text-lg">Request Body</h4>
+                <form className="flex flex-col justify-start items-start gap-2 pl-4">
                     <h5>id:</h5>
                     <div className="grid grid-cols-2 gap-y-2 ml-8">
                         <label htmlFor="id">_id:</label>
@@ -78,8 +76,8 @@ export default function UpdateProduct({ setResponse }) {
             </div>
 
             <div className="flex flex-col justify-start items-start gap-2">
-                <h4>Responses</h4>
-                <ul>
+                <h4 className="text-lg">Responses</h4>
+                <ul className="flex flex-col gap-2 pl-4">
                     <li>
                         <p>Code: 200</p>
                         <p>Payload: updated coffee object</p>
