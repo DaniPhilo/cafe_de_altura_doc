@@ -23,7 +23,7 @@ export default function CreateProduct({ setResponse }) {
             ...data,
             available: data.available === "true" ? true : false
         }
-        const response = await fetch("https://cda-api.vercel.app/api/products/create", {
+        const response = await fetch("https://cafe-de-altura.vercel.app/api/products/create", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -42,7 +42,7 @@ export default function CreateProduct({ setResponse }) {
             </div>
             <div className="flex flex-col justify-start items-start gap-2">
                 <h4 className="text-lg">HTTP Request</h4>
-                <MethodTag method="POST" url="https://cda-api.vercel.app/api/products/create" />
+                <MethodTag method="POST" url="https://cafe-de-altura.vercel.app/api/products/create" />
             </div>
             <div className="flex flex-col justify-start items-start gap-2">
                 <h4 className="text-lg">Request Body</h4>

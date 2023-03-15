@@ -32,7 +32,7 @@ export default function UpdateProduct({ setResponse }) {
             ...data,
             available: data.available === "true" ? true : false
         }
-        const response = await fetch("https://cda-api.vercel.app/api/products/update", {
+        const response = await fetch("https://cafe-de-altura.vercel.app/api/products/update", {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -51,7 +51,7 @@ export default function UpdateProduct({ setResponse }) {
             </div>
             <div className="flex flex-col justify-start items-start gap-2">
                 <h4 className="text-lg">HTTP Request</h4>
-                <MethodTag method="PUT" url="https://cda-api.vercel.app/api/products/update" />
+                <MethodTag method="PUT" url="https://cafe-de-altura.vercel.app/api/products/update" />
             </div>
             <div className="flex flex-col justify-start items-start gap-2">
                 <h4 className="text-lg">Request Body</h4>

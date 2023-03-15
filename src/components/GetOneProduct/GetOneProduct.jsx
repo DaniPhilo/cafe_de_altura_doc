@@ -9,7 +9,7 @@ export default function GetOneProduct({ setResponse }) {
     const [brandInput, setBrandInput] = useState("");
 
     const getOneProduct = async () => {
-        const response = await fetch(`https://cda-api.vercel.app/api/products/coffee/?${query}`);
+        const response = await fetch(`https://cafe-de-altura.vercel.app/api/products/coffee/?${query}`);
         const data = await response.json();
         setResponse(data);
     }
@@ -35,7 +35,7 @@ export default function GetOneProduct({ setResponse }) {
             </div>
             <div className="flex flex-col justify-start items-start gap-2">
                 <h4 className="text-lg">HTTP Request</h4>
-                <MethodTag method="GET" url="https://cda-api.vercel.app/api/products/coffee/?&#123;id or brand&#125;" />
+                <MethodTag method="GET" url="https://cafe-de-altura.vercel.app/api/products/coffee/?&#123;id or brand&#125;" />
             </div>
             <div className="flex flex-col justify-start items-start gap-2">
                 <h4 className="text-lg">Query Parameters</h4>

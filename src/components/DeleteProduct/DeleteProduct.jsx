@@ -11,7 +11,7 @@ export default function DeleteProduct({ setResponse }) {
     }
 
     const deleteProduct = async () => {
-        const response = await fetch("https://cda-api.vercel.app/api/products/delete", {
+        const response = await fetch("https://cafe-de-altura.vercel.app/api/products/delete", {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
@@ -30,7 +30,7 @@ export default function DeleteProduct({ setResponse }) {
             </div>
             <div className="flex flex-col justify-start items-start gap-2">
                 <h4 className="text-lg">HTTP Request</h4>
-                <MethodTag method="DELETE" url="https://cda-api.vercel.app/api/products/delete" />
+                <MethodTag method="DELETE" url="https://cafe-de-altura.vercel.app/api/products/delete" />
             </div>
             <div className="flex flex-col justify-start items-start gap-2">
                 <h4 className="text-lg">Request Body</h4>
