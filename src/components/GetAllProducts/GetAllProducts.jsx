@@ -4,7 +4,7 @@ import MethodTag from "../MethodTag/MethodTag"
 export default function GetAllProducts({ setResponse }) {
 
     const getAllProducts = async () => {
-        const response = await fetch("https://cafe-de-altura.vercel.app/api/products");
+        const response = await fetch(process.env.REACT_APP_API_URL);
         const data = await response.json();
         setResponse(data);
     }
@@ -17,7 +17,7 @@ export default function GetAllProducts({ setResponse }) {
             </div>
             <div className="flex flex-col justify-start items-start gap-2">
                 <h4 className="text-lg">HTTP Request</h4>
-                <MethodTag method="GET" url="https://cafe-de-altura.vercel.app/api/products" />
+                <MethodTag method="GET" url="" />
             </div>
             <div className="flex flex-col justify-start items-start gap-2">
                 <h4 className="text-lg">Responses</h4>
