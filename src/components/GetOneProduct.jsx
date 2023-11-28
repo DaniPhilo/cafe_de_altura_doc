@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import MethodTag from "../MethodTag/MethodTag";
-import Button from "../Button/Button";
+import MethodTag from "./MethodTag";
+import Button from "./Button";
 
 export default function GetOneProduct({ setResponse }) {
 

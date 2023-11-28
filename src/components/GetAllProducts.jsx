@@ -1,5 +1,5 @@
-import Button from "../Button/Button.jsx"
-import MethodTag from "../MethodTag/MethodTag"
+import Button from "./Button.jsx"
+import MethodTag from "./MethodTag.jsx"
 
 export default function GetAllProducts({ setResponse }) {
 

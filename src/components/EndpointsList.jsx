@@ -1,8 +1,8 @@
-import CreateProduct from "../CreateProduct/CreateProduct";
-import DeleteProduct from "../DeleteProduct/DeleteProduct";
-import GetAllProducts from "../GetAllProducts/GetAllProducts";
-import GetOneProduct from "../GetOneProduct/GetOneProduct";
-import UpdateProduct from "../UpdateProduct/UpdateProduct";
+import CreateProduct from "./CreateProduct";
+import DeleteProduct from "./DeleteProduct";
+import GetAllProducts from "./GetAllProducts";
+import GetOneProduct from "./GetOneProduct";
+import UpdateProduct from "./UpdateProduct";
 
 export default function EndpointsList({ setResponse }) {
 

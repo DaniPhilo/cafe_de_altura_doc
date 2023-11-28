@@ -1,6 +1,6 @@
 import { useState } from "react"
-import Button from "../Button/Button"
-import MethodTag from "../MethodTag/MethodTag";
+import Button from "./Button"
+import MethodTag from "./MethodTag";
 
 export default function UpdateProduct({ setResponse }) {
     const [coffeeId, setCoffeeId] = useState({

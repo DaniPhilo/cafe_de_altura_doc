@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Hero from "./components/Hero/Hero";
-import NavBar from "./components/NavBar/NavBar";
-import ResponseDisplay from "./components/ResponseDisplay/ResponseDisplay";
-import EndpointsList from "./components/EndpointsList/EndpointsList";
+import Hero from "./components/Hero";
+import NavBar from "./components/NavBar";
+import ResponseDisplay from "./components/ResponseDisplay";
+import EndpointsList from "./components/EndpointsList";
 
 function App() {
 
